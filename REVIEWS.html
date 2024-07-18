@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Review Page</title>
+    <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    
+</head>
+
+  <body>
+      <header style="text-align: center; padding: 20px;">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <a class="navbar-brand" href="#">Review Page</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ml-auto">
+                      <li class="nav-item">
+                          <a class="nav-link" href="INDEX.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="Explore.html">Explore</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="ABOUT.html">About</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="Contact.html">Contact</a>
+                      </li>
+                  </ul>
+              </div>
+          </nav>
+          <h1>Customer Reviews</h1>
+      </header>
+  
+      <section style="margin: 20px;">
+          <h2>Write a Review</h2>
+          <form id="review-form">
+              <label for="name">Name:</label>
+              <input type="text" id="name" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+  
+              <label for="rating">Rating:</label>
+              <select id="rating" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+                  <option value="">Select rating</option>
+                  <option value="5">5 Stars</option>
+                  <option value="4">4 Stars</option>
+                  <option value="3">3 Stars</option>
+                  <option value="2">2 Stars</option>
+                  <option value="1">1 Star</option>
+              </select>
+  
+              <label for="message">Message:</label>
+              <textarea id="message" rows="4" required style="width: 100%; padding: 10px; margin-bottom: 10px;"></textarea>
+  
+              <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer;">Submit Review</button>
+          </form>
+      </section>
+  
+      <section id="reviews-section" style="margin: 20px;">
+          <h2>Customer Reviews</h2>
+          <div id="reviews-container"></div>
+      </section>
+  
+      <script>
+          document.getElementById("review-form").addEventListener("submit", function(event) {
+              event.preventDefault();
+  
+              var name = document.getElementById("name").value;
+              var rating = document.getElementById("rating").value;
+              var message = document.getElementById("message").value;
+  
+              var review = document.createElement("div");
+              review.className = "review";
+              review.innerHTML = "<p><strong>Name: </strong>" + name + "</p>" +
+                                 "<p><strong>Rating: </strong><span class='rating'>" + getStarRating(rating) + "</span></p>" +
+                                 "<p><strong>Message: </strong>" + message + "</p>";
+              
+              document.getElementById("reviews-container").appendChild(review);
+  
+              document.getElementById("name").value = "";
+              document.getElementById("rating").value = "";
+              document.getElementById("message").value = "";
+          });
+  
+          function getStarRating(rating) {
+              var stars = "";
+              for (var i = 0; i < rating; i++) {
+                  stars += "&#9733;"; // Unicode star character
+              }
+              return stars;
+          }
+      </script>
+  </body>
+  </html>

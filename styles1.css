@@ -1,0 +1,272 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .navbar-brand {
+    font-size: 24px;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #fff;
+    margin-left: 10px;
+  }
+  
+  /* images */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .form-container {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  input[type="text"],
+  input[type="date"] {
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  select#country {
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  select#country option {
+    padding: 5px;
+  }
+  input[type="submit"] {
+    padding: 10px;
+    background-color: Navy;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  p {
+    margin-top: 20px;
+  }
+ <!-- hOME STYLE--!>
+
+  .H{
+    Padding right: 20pc
+}
+<!--photos--!>
+main {
+  padding: 20px;
+}
+
+#product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  width: 300px;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.product img {
+  max-width: 50%;
+  height: 50%;
+}
+
+.product h3 {
+  margin: 10px 0;
+}
+.product p {
+  margin: 5px 0;
+}
+
+.description {
+  color: #666;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.phone {
+  color: #999;
+}
+.fancy-text {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color:  blue;
+  /* Add any additional styling properties as desired */
+}
+/* chat-widget.css */
+
+.chat-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+.chat-widget-header {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.chat-widget-body {
+  padding: 10px;
+  height: 250px;
+  overflow-y: scroll;
+}
+
+.chat-widget-footer {
+  padding: 10px;
+}
+/* chat-widget.css */
+
+.exit-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  background-color: #ccc;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.exit-button:hover {
+  background-color: blue;
+}
+/* chat-widget.css */
+
+.messenger-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.messenger-icon i {
+  color: blue;
+  font-size: 24px;
+}
+
+.chat-widget {
+  display: none;
+}
+/* chat-widget.css */
+
+/* ...existing styles... */
+
+.chat-widget-body p {
+  margin: 5px 0;
+}
+
+.chat-widget-body p:nth-child(even) {
+  background-color: pink;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.chat-widget-body p:nth-child(odd) {
+  background-color: #e5e5e5;
+}
+
+.chat-widget-body p:nth-child(odd) span {
+  font-weight: bold;
+}
+
+.chat-widget-body p:nth-child(even) span {
+  font-weight: bold;
+}
+
+/* ...existing styles... */
+  /* Footer Styles */
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .card-img-top {
+      height: 250px;
+    }
+  }
+
+  .ATA{
+    font-family: 'Dancing Script', cursive ;
+  }
+  

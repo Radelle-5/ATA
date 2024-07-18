@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ATA MOBILE</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand ATA" href="#">ATA MOBILE</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="REVIEWS.html">Customer Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ABOUT.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Register.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Welcome to ATA Mobile Shop</h1>
+      <p>Discover the latest smartphones and accessories</p>
+      <p>If you need anything, dont hesitate to click the message icon<break> and place an order</p>
+      <a class="btn btn-primary" href="Explore.html">Explore</a>
+    </div>
+  </section>
+  <script src="script.js"></script>
+
+
+  <section class="features">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>IPHONES</h2>
+          <p>Original iphones, 1 year guarantee</p>
+          <a href="IPHONES.HTML" class="btn btn-primary">view</a>
+        </div>
+        <div class="col-md-4">
+          <h2>SAMSUNG</h2>
+          <p>Experience smooth multitasking and fast performance with our samsungs</p>
+          <a href="SAMSUNG.html" class="btn btn-primary">View</a>
+        </div>
+        <div class="col-md-4">
+          <h2>Google pixels</h2>
+          <p>Enjoy a sleek and stylish design that complements your personal style.</p>
+          <a href="PIXELS.html" class="btn btn-primary">View</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 ATA MOBILE. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+</body>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Website with Chat Widget</title>
+    <link rel="stylesheet" href="chat-widget.css">
+</head>
+<body>
+    <!-- Your shopping website content goes here -->
+
+    <!-- Chat Widget HTML -->
+    <div class="chat-widget">
+        <div class="exit-button">&times;</div>
+        <div class="chat-widget-header">
+            <h5>Chat</h5>
+        </div>
+        <div class="chat-widget-body">
+            <!-- Chat messages will be appended here -->
+        </div>
+        <div class="chat-widget-footer">
+            <input type="text" class="form-control" placeholder="Type your message...">
+        </div>
+    </div>
+
+    <!-- Messenger Icon HTML -->
+    <div class="messenger-icon">
+        <i class="fa fa-comments"></i>
+    </div>
+
+    <!-- JavaScript/jQuery for chat functionality -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script>
+        // Sample JavaScript code for chat functionality
+        $(document).ready(function() {
+            // Function to handle sending a message
+            function sendMessage() {
+                var message = $('.chat-widget-footer input').val();
+                $('.chat-widget-body').append('<p>You: ' + message + '</p>');
+                $('.chat-widget-footer input').val('');
+                // Handle message sending logic here (e.g., AJAX request to server)
+
+                // Auto-reply with a predefined message
+                autoReply();
+            }
+
+            // Function for auto-reply with predefined message
+            function autoReply() {
+                var replyMessage = "Thanks for contacting ATA mobile, please click this link to communicate with a customer service directly on WhatsApp: <a href='https://example.com'>WhatsApp Link</a>";
+                $('.chat-widget-body').append('<p>ATA Mobile: ' + replyMessage + '</p>');
+            }
+
+            // Event listener for sending a message when the enter key is pressed
+            $('.chat-widget-footer input').keypress(function(event) {
+                if (event.which == 13) {
+                    sendMessage();
+                }
+            });
+
+            // Event listener for sending a message when the send button is clicked
+            $('.chat-widget-footer button').click(function() {
+                sendMessage();
+            });
+
+            // Exit button event listener
+            $('.exit-button').click(function() {
+                $('.chat-widget').hide();
+                $('.messenger-icon').show();
+            });
+
+            // Messenger icon event listener
+            $('.messenger-icon').click(function() {
+                $('.chat-widget').show();
+                $('.messenger-icon').hide();
+            });
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

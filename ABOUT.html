@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About ATA mobile</title>
+    <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    
+</head>
+
+  <body>
+      <header style="text-align: center; padding: 20px;">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <a class="navbar-brand" href="#">About ATA mobile</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ml-auto">
+                      <li class="nav-item">
+                          <a class="nav-link" href="INDEX.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="Explore.html">Explore</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="ABOUT.html">About</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="Contact.html">Contact</a>
+                      </li>
+                  </ul>
+              </div>
+          </nav>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+    .founder-card {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .founder-card .founder-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+    .founder-card .founder-details {
+      flex-grow: 1;
+    }
+    .founder-card .name {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .founder-card .education {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+    .founder-card .description {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>About ATA MOBILE</h1>
+    
+    <div id="founder-section"></div>
+  </div>
+  
+  <script>
+    // Founder data (replace with your actual data)
+    var founder = {
+      name: 'ATONLIEU ARNICH (Founder)',
+      education: 'Bachelor\'s Degree in Business Administration',
+      description: 'Arnich is the founder of our phone shop. With over 10 years of experience in the mobile industry, he has a deep passion for providing customers with the latest and greatest smartphones. His expertise in business administration has helped shape the success of our shop.',
+      image: 'images/founder.jpg' // Replace with the path to your founder's image
+    };
+    
+    // Function to generate the founder card
+    function generateFounderCard() {
+      var founderSection = document.getElementById('founder-section');
+      
+      var card = document.createElement('div');
+      card.className = 'founder-card';
+      
+      var founderImage = document.createElement('img');
+      founderImage.className = 'founder-image';
+      founderImage.src = founder.image;
+      founderImage.alt = founder.name;
+      
+      var founderDetails = document.createElement('div');
+      founderDetails.className = 'founder-details';
+      
+      var name = document.createElement('div');
+      name.className = 'name';
+      name.textContent = founder.name;
+      
+      var education = document.createElement('div');
+      education.className = 'education';
+      education.textContent = founder.education;
+      
+      var description = document.createElement('div');
+      description.className = 'description';
+      description.textContent = founder.description;
+      
+      founderDetails.appendChild(name);
+      founderDetails.appendChild(education);
+      founderDetails.appendChild(description);
+      
+      card.appendChild(founderImage);
+      card.appendChild(founderDetails);
+      
+      founderSection.appendChild(card);
+    }
+    
+    // Call the function to generate the founder card
+    generateFounderCard();
+  </script>
+  
+  <script>
+    // Founder data (replace with your actual data)
+    var founder = {
+  name: 'ATA MOBILE, FOUND IN 2023',
+  education: 'Sales of original gadgets, with the main office in Germany and a distribution branch in Yaounde, Cameroon.',
+  description: 'ATA Mobile is a leading provider of high-quality gadgets.',
+  image: 'images/img.jpg' // Replace with the path to your founder's image
+};
+    
+    // Function to generate the founder card
+    function generateFounderCard() {
+      var founderSection = document.getElementById('founder-section');
+      
+      var card = document.createElement('div');
+      card.className = 'founder-card';
+      
+      var founderImage = document.createElement('img');
+      founderImage.className = 'founder-image';
+      founderImage.src = founder.image;
+      founderImage.alt = founder.name;
+      
+      var founderDetails = document.createElement('div');
+      founderDetails.className = 'founder-details';
+      
+      var name = document.createElement('div');
+      name.className = 'name';
+      name.textContent = founder.name;
+      
+      var education = document.createElement('div');
+      education.className = 'education';
+      education.textContent = founder.education;
+      
+      var description = document.createElement('div');
+      description.className = 'description';
+      description.textContent = founder.description;
+      
+      founderDetails.appendChild(name);
+      founderDetails.appendChild(education);
+      founderDetails.appendChild(description);
+      
+      card.appendChild(founderImage);
+      card.appendChild(founderDetails);
+      
+      founderSection.appendChild(card);
+    }
+    
+    // Call the function to generate the founder card
+    generateFounderCard();
+  </script>
+</body>
+</html>

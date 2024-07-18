@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>iPhone Page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: white;
+      color: #333;
+    }
+    .navbar {
+      background-color: blue;
+      color: white;
+    }
+    .iphone-card {
+      margin-bottom: 20px;
+    }
+    .iphone-image {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+    .button-container {
+      text-align: center;
+    }
+    .details-button {
+      margin-right: 10px;
+    }
+    .hero {
+    background-color: #87CEEB;
+    padding: 100px 0;
+    text-align: center;
+  }
+  .ATA{
+    font-family: 'Dancing Script', cursive ;
+  }
+  .font{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: blue;
+    font-size: x-large;
+    size: 200;
+  }
+  </style>
+</head>
+<body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-primary bg-dark">
+        <a class="navbar-brand ATA" href="#">ATA MOBILE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="INDEX.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="REVIEWS.html">Customer Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ABOUT.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  
+  
+  <div class="container font">
+    <h1>All Iphones Available</h1>
+    
+    <div id="iphone-list"></div>
+  </div>
+  
+  <script>
+    // Dummy data for iPhone list (replace with your actual data)
+    var iphones = [
+      { 
+        name: 'iPhone 12 Pro Max', 
+        originalPrice: '$1099', 
+        discountedPrice: '$999', 
+        images: [
+          'images/iphones/iphone 12 pro max.png',
+          'images/iphones/iphone 12 pmax.png',
+          'images/iphones/iphone 12p.png',
+        ]
+      },
+      { 
+        name: 'iPhone 14', 
+        originalPrice: '$999', 
+        discountedPrice: '$899', 
+        images: [
+          'images/img2.jpg',
+          'images/img3.jpg',
+          'images/img1.jpg',
+        ]
+      },
+      
+      // Add more iPhone data objects here
+    ];
+    
+    // Function to generate iPhone cards
+    function generateIphoneCards() {
+      var iphoneList = document.getElementById('iphone-list');
+      
+      iphones.sort(function(a, b) {
+        return b.originalPrice - a.originalPrice; // Sort from highest to lowest
+      });
+      
+      for (var i = 0; i < iphones.length; i++) {
+        var card = document.createElement('div');
+        card.className = 'card iphone-card';
+        
+        var cardBody = document.createElement('div');
+        cardBody.className = 'card-body';
+        
+        var cardTitle = document.createElement('h5');
+        cardTitle.className = 'card-title';
+        cardTitle.textContent = iphones[i].name;
+        
+        var imagesContainer = document.createElement('div');
+        imagesContainer.className = 'text-center';
+        
+        for (var j = 0; j < iphones[i].images.length; j++) {
+          var image = document.createElement('img');
+          image.className = 'iphone-image';
+          image.src = iphones[i].images[j];
+          image.alt = iphones[i].name + ' - ' + (j + 1);
+          imagesContainer.appendChild(image);
+        }
+        
+        var detailsButton = document.createElement('button');
+        detailsButton.className = 'btn btn-primary details-button';
+        detailsButton.textContent = '';
+        
+        var buyButton = document.createElement('button');
+        buyButton.className = 'btn btn-success';
+        buyButton.textContent = '';
+        
+        var buttonContainer = document.createElement('div');
+        buttonContainer.className = 'button-container';
+        buttonContainer.appendChild(detailsButton);
+        buttonContainer.appendChild(buyButton);
+        
+        cardBody.appendChild(cardTitle);
+        cardBody.appendChild(imagesContainer);
+        cardBody.appendChild(buttonContainer);
+        card.appendChild(cardBody);
+        
+        iphoneList.appendChild(card);
+      }
+    }
+    
+    // Call the function to generate iPhone cards
+    generateIphoneCards();
+  </script>
+</body>
+</html>
